@@ -11,6 +11,7 @@ const MyModal = ({modalVisible, selectedRow, dismissModal}) => {
     animationType="slide"
     transparent={true}
     visible={modalVisible}
+    testID="modal"
     onRequestClose={() => {
       
         dismissModal();
@@ -24,7 +25,7 @@ const MyModal = ({modalVisible, selectedRow, dismissModal}) => {
         source={{uri: selectedRow.url}}
         style={{width: 300, height: 400, marginBottom: 20}}
         />
-        <TouchableOpacity style={styles.closeButton} onPress={dismissModal}>
+        <TouchableOpacity style={styles.closeButton} onPress={dismissModal} testID="close">
             <Text style={{color: "white"}}>Close</Text>
         </TouchableOpacity>
       

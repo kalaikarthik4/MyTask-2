@@ -21,13 +21,14 @@ const MyListView = ({data}) => {
 return <View>
     <FlatList
     data={data}
+    testID="list"
     keyExtractor={(item, index) => {
       return index.toString();
     }}
-    renderItem={({ item }) => {
+    renderItem={({ item,index }) => {
     
       return (
-        <TouchableWithoutFeedback onPress={ () => actionOnRow(item)}>
+        <TouchableWithoutFeedback testID={index.toString()} onPress={ () => actionOnRow(item)}>
         <View  style={styles.itemContainer}>
 
           <Image
