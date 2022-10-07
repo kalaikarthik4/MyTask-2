@@ -24,7 +24,7 @@ const App = () => {
       setData(res)
       setLoading(false)
     })
-    .catch((error) => console.error(error))
+    
   }, []);
 
 
